@@ -22,7 +22,7 @@ set ruler               " Show the cursor position all the time
 set noexpandtab
 set ts=4 sw=4
 set number
-
+set tabstop=4
 set viminfo='20,\"500   " Keep a .viminfo file.
 
 " Don't use Ex mode, use Q for formatting
