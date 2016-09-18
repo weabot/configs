@@ -1,0 +1,10 @@
+set prompt = "%B%{\033[32m%}%n%{\033[33m%}@%{\033[36m%}%m%b: %{\033[32m%}%B%~%b%# "
+bindkey -v
+set autolist set color set colorcat
+alias ls ls --color='always'
+set EDITOR=vim
+set VISUAL=vim
+alias ttympv mpv -vo drm --profile=pseudo-gui
+alias cc clang
+alias cpp clang++
+alias cxx clang++
