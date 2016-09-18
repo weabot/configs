@@ -1,5 +1,5 @@
 #VARIABLES
-set prompt = "%{\033[32m%}%n%{\033[33m%}@%{\033[36m%}%m: %{\033[32m%}%B%~%b%# "
+set prompt="%{\033[36m%}%n%{\033[31m%}@%{\033[33m%}%m: %{\033[32m%}%B%~%b%# "
 set autolist set color set colorcat
 set EDITOR=vim
 set VISUAL=vim
