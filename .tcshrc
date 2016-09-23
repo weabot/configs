@@ -7,6 +7,7 @@ set VISUAL=vim
 #ALIAS
 alias ls ls --color='always'
 alias ttympv mpv -vo drm --profile=pseudo-gui
+alias clang clang -flto
 alias cc clang
 alias cpp clang++
 alias cxx clang++
