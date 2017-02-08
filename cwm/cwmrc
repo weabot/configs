@@ -1,0 +1,61 @@
+color activeborder "#b9b9b9"
+color font "#b9b9b9"
+color selfont "#b9b9b9"
+color groupborder "#006600"
+color inactiveborder "#464646"
+color menubg "#101010"
+color menufg "#464646"
+color urgencyborder "#ff0000"
+color ungroupborder "#aa0000"
+
+command Terminal "konsole"
+command Lock "slock"
+command Qutebrowser "qutebrowser"
+
+fontname "Liberation Sans:pixelsize=12"
+gap 24 0 0 0 
+moveamount 12
+snapdist 8 
+
+unbind-key all
+bind-key  4C-r     restart
+bind-key  4C-q     quit
+bind-key  4C-x     slock
+bind-key M-slash menu-window
+bind-key M-f	window-fullscreen
+bind-key M-g	window-hide
+bind-key M-tab window-cycle
+bind-key MS-tab window-rcycle
+bind-key M-q	window-delete
+bind-key  M-m      window-vmaximize
+bind-key  MS-m     window-hmaximize
+bind-key  MS-t     window-htile
+bind-key  M-t      window-vtile
+bind-key  MC-k     window-move-up
+bind-key  MC-j     window-move-down
+bind-key  MC-l     window-move-right
+bind-key  MC-h     window-move-left
+bind-key  M-k      window-move-up-big
+bind-key  M-j      window-move-down-big
+bind-key  M-l      window-move-right-big
+bind-key  M-h      window-move-left-big
+bind-key  MCS-k     window-resize-up
+bind-key  MCS-j     window-resize-down
+bind-key  MCS-l     window-resize-right
+bind-key  MCS-h     window-resize-left
+bind-key  MS-k     window-resize-up-big
+bind-key  MS-j     window-resize-down-big
+bind-key  MS-l     window-resize-right-big
+bind-key  MS-h     window-resize-left-big
+
+
+bind-key 4-t	konsole
+bind-key 4-r	menu-exec
+bind-key 4-w	qutebrowser
+
+unbind-mouse M-1	  
+bind-mouse M-1     window-move
+unbind-mouse M-3	  
+bind-mouse M-3     window-resize
+unbind-mouse M-2	  
+bind-mouse M-2     window-lower

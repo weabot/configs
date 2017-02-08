@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2016-02-29 Mon 21:49 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Moritz Ulrich" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline17">1. weechat.el - Chat via Weechat in Emacs</a>
+<ul>
+<li><a href="#orgheadline1">1.1. Manual Installation</a></li>
+<li><a href="#orgheadline2">1.2. Usage</a></li>
+<li><a href="#orgheadline3">1.3. Color settings</a></li>
+<li><a href="#orgheadline4">1.4. SSL</a></li>
+<li><a href="#orgheadline16">1.5. Modules</a>
+<ul>
+<li><a href="#orgheadline5">1.5.1. Button</a></li>
+<li><a href="#orgheadline6">1.5.2. Complete</a></li>
+<li><a href="#orgheadline7">1.5.3. Spelling</a></li>
+<li><a href="#orgheadline10">1.5.4. Notifications</a></li>
+<li><a href="#orgheadline11">1.5.5. Tracking</a></li>
+<li><a href="#orgheadline12">1.5.6. Smiley</a></li>
+<li><a href="#orgheadline13">1.5.7. LaTeX</a></li>
+<li><a href="#orgheadline14">1.5.8. Speedbar</a></li>
+<li><a href="#orgheadline15">1.5.9. Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline18">2. Contact</a></li>
+<li><a href="#orgheadline19">3. Contributors</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline17" class="outline-2">
+<h2 id="orgheadline17"><span class="section-number-2">1</span> weechat.el - Chat via Weechat in Emacs</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Please note: This README is work in progress.  A more detailed documentation
+will follow.
+</p>
+
+<p>
+weechat.el requires Emacs 24 and <a href="https://github.com/magnars/s.el">s.el</a>.  For Emacs versions below 24.3
+you also need <a href="http://elpa.gnu.org/packages/cl-lib.html">cl-lib</a>.  WeeChat version 0.4.0 or newer is recommended!
+</p>
+
+<p>
+You can install weechat.el via package.el (<a href="http://marmalade-repo.org/">marmalade</a> (stable releases) or
+<a href="http://melpa.milkbox.net/#installing">melpa</a> (development snapshot) required):
+</p>
+
+<pre class="example">
+M-x package-install RET weechat RET
+</pre>
+
+<p>
+See <a href="NEWS.html">NEWS.org</a> for major changes in releases.
+</p>
+</div>
+<div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1"><span class="section-number-3">1.1</span> Manual Installation</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><p>
+Install dependencies via package.el:
+</p>
+
+<pre class="example">
+M-x package-install RET s RET
+</pre></li>
+
+<li><p>
+If your Emacs is older than 24.3:
+</p>
+
+<pre class="example">
+M-x package-install RET cl-lib RET
+</pre></li>
+
+<li><p>
+Download this directory to your system and add it to the <code>load-path</code>:
+</p>
+
+<pre class="example">
+(add-to-list 'load-path (expand-file-name "path/to/weechat.el/"))
+</pre></li>
+
+<li><p>
+Load weechat.el
+</p>
+
+<pre class="example">
+(require 'weechat)
+</pre>
+
+<p>
+(You can add this to your <code>~/.emacs.d/init.el</code> or similar)
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2"><span class="section-number-3">1.2</span> Usage</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+First, setup the relay server in weechat.  Please refer to the
+<a href="http://www.weechat.org/files/doc/stable/weechat_user.en.html#relay_weechat_protocol">manual</a>.
+</p>
+
+<p>
+To load and establish a connection:
+</p>
+
+<pre class="example">
+(require 'weechat)
+M-x weechat-connect RET
+</pre>
+
+<p>
+To show a channel in Emacs, do:
+</p>
+
+<pre class="example">
+M-x weechat-monitor-buffer RET
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">1.3</span> Color settings</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Most colors in weechat.el come directly from WeeChat and are only
+translated into Emacs faces.  There are a few notable exceptions
+such as <code>weechat-highlight-face</code> or <code>weechat-nick-self-face</code>.
+</p>
+
+<p>
+If you are unsatisfied with the colors that WeeChat send then
+either change the corresponding color in WeeChat or customize
+<code>weechat-color-list</code>.  Do <b>not</b> add or remove any values in the
+list!  Simply change the value.  Using <code>rainbow-mode</code> (from GNU
+ELPA) or <code>list-colors-display</code> can help finding good values.
+</p>
+
+<p>
+The default configuration tries to match the WeeChat colors as
+close as possible.  Example for colors that go better with the
+Emacs' default theme are:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq weechat-color-list '(unspecified <span style="font-style: italic;">"black"</span> <span style="font-style: italic;">"dim gray"</span> <span style="font-style: italic;">"dark red"</span> <span style="font-style: italic;">"red"</span>
+                                       <span style="font-style: italic;">"dark green"</span> <span style="font-style: italic;">"green"</span> <span style="font-style: italic;">"brown"</span>
+                                       <span style="font-style: italic;">"orange"</span> <span style="font-style: italic;">"dark blue"</span> <span style="font-style: italic;">"blue"</span>
+                                       <span style="font-style: italic;">"dark magenta"</span> <span style="font-style: italic;">"magenta"</span> <span style="font-style: italic;">"dark cyan"</span>
+                                       <span style="font-style: italic;">"royal blue"</span> <span style="font-style: italic;">"dark gray"</span> <span style="font-style: italic;">"gray"</span>))
+</pre>
+</div>
+
+<p>
+If you do not want any color then set <code>weechat-debug-strip-formatting</code> to
+<code>t</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">1.4</span> SSL</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+See documentation in <a href="SSL.html">SSL.org</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">1.5</span> Modules</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Weechat.el comes with module support.  Modules can be loaded by simply
+calling <code>load-library</code> and removed by using <code>unload-feature</code>.  The variable
+<code>weechat-modules</code> can be customized to set default loaded modules.
+</p>
+
+<p>
+Available modules are:
+</p>
+</div>
+<div id="outline-container-orgheadline5" class="outline-4">
+<h4 id="orgheadline5"><span class="section-number-4">1.5.1</span> Button</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+This module provides support for buttons in chat windows.  E.g., it turns
+URLs into clickable buttons.  The module is default loaded.  See <code>weechat-modules</code>.
+</p>
+
+<p>
+It supports several types of buttons such as URLs, Channels, Emacs' symbols,
+E-Mails, Manpages, Info links, and Nick names.  However not all buttons are
+activated as default.  See customization group <code>weechat-button</code> to enable
+and disable specific buttons.
+</p>
+
+<p>
+You can use <code>weechat-button-list</code> to simply add your own button types.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">1.5.2</span> Complete</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+This module provides support for nickname and command completion. It uses
+Emacs' <code>pcomplete</code> framework and is default loaded.
+</p>
+
+<p>
+If you want case-insensitive completion, set <code>completion-ignore-case</code> to
+<code>t</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">1.5.3</span> Spelling</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<p>
+This module provides spelling support by using Emacs' <code>flyspell</code>.  You can
+customize the dictionary on a per channel/server basis by customizing
+<code>weechat-spelling-dictionaries</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">1.5.4</span> Notifications</h4>
+<div class="outline-text-4" id="text-1-5-4">
+<p>
+Weechat.el supports notifications for important messages, such as
+highlights or queries.  The support is either based on <code>notifications.el</code>
+which is shipped with Emacs since version 24 and uses the Freedesktop
+notification spec.  Another solution is based on <a href="http://www.emacswiki.org/emacs/Sauron">Sauron</a>.
+</p>
+
+<p>
+To activate notifications you have to load the matching module.  Either
+<code>weechat-notifications</code> for <code>notifications.el</code> or <code>weechat-sauron</code> for
+Sauron support.
+</p>
+
+<p>
+To change the message types you want to receive notifications for customize
+<code>weechat-notification-types</code>.
+</p>
+</div>
+<ol class="org-ol"><li><a id="orgheadline8"></a>notifications.el<br  /><div class="outline-text-5" id="text-1-5-4-1">
+<p>
+Loading the <code>weechat-notifications</code> module uses <code>notifications.el</code>
+to display notifications.  This uses the Freedesktop notification spec and
+should work fine on most Linux systems.
+</p>
+
+<p>
+You can customize <code>weechat-notifications-sound</code> to play a sound on
+notification.  Setting <code>weechat-notifications-icon</code> allows to change the
+notification icon.
+</p>
+</div></li>
+<li><a id="orgheadline9"></a>Sauron<br  /><div class="outline-text-5" id="text-1-5-4-2">
+<p>
+The <code>weechat-sauron</code> module uses <a href="http://www.emacswiki.org/emacs/Sauron">Sauron</a> for notifications.
+</p>
+</div></li></ol>
+</div>
+<div id="outline-container-orgheadline11" class="outline-4">
+<h4 id="orgheadline11"><span class="section-number-4">1.5.5</span> Tracking</h4>
+<div class="outline-text-4" id="text-1-5-5">
+<p>
+The <code>weechat-tracking</code> module provides tracking information in the mode
+line, similar to erc-track.  It uses the <a href="https://github.com/jorgenschaefer/circe/wiki/Tracking">Tracking</a> library (available on
+marmalade or el-get).
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12"><span class="section-number-4">1.5.6</span> Smiley</h4>
+<div class="outline-text-4" id="text-1-5-6">
+<p>
+This module uses Gnus' <code>smiley-region</code> support to convert text smileys,
+such as :-), into a graphical representation.  See the documentation of
+<code>smiley.el</code> on how to customize it.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline13" class="outline-4">
+<h4 id="orgheadline13"><span class="section-number-4">1.5.7</span> LaTeX</h4>
+<div class="outline-text-4" id="text-1-5-7">
+<p>
+The <code>weechat-latex</code> module provides a simple preview function for embedded
+LaTeX.  It is based Org's LaTeX preview functionality and many of Org's
+LaTex customizations apply to it as well.  Use <code>weechat-latex-preview</code> to
+generate previews and <code>weechat-latex-remove</code> to remove them.
+</p>
+
+<p>
+There is also <code>weechat-latex-auto-mode</code> to automatically turn LaTeX
+fragments in every new message into a preview.
+</p>
+
+<p>
+By using <code>weechat-latex-preview-region</code> or <code>weechat-latex-preview-line</code>
+the LaTeX previews can be limited to certain parts of the buffer.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline14" class="outline-4">
+<h4 id="orgheadline14"><span class="section-number-4">1.5.8</span> Speedbar</h4>
+<div class="outline-text-4" id="text-1-5-8">
+<p>
+The <code>weechat-speedbar</code> module provides Emacs' Speedbar integration.  After
+loading the module and opening the Speedbar there should be a Display mode
+called "WeeChat" available.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline15" class="outline-4">
+<h4 id="orgheadline15"><span class="section-number-4">1.5.9</span> Image</h4>
+<div class="outline-text-4" id="text-1-5-9">
+<p>
+This modules allows (embedded) previews of image urls.  After loading the
+module a button should appear next to urls to image files.  By clicking the
+button images should be opened inline and by clicking the button again they
+should be removed.
+</p>
+
+<p>
+By changing <code>weechat-image-display-func</code> the images can instead be opened
+inside the buffer <code>weechat-image-buffer</code>.  The detection of image URLs can
+be influenced with <code>weechat-image-url-regex</code> and
+<code>weechat-image-url-blacklist-regex</code>.
+</p>
+
+<p>
+Be careful when loading images of sources you do not trust.  Change
+<code>weechat-image-size-limit</code> to prevent the display of large images.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline18" class="outline-2">
+<h2 id="orgheadline18"><span class="section-number-2">2</span> Contact</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Feel free to contact us via Github, Email, or IRC (#weechat.el on Freenode)
+</p>
+
+<p>
+We appreciate every comment, suggestion, or nagging for missing features.
+Tell us your story!
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline19" class="outline-2">
+<h2 id="orgheadline19"><span class="section-number-2">3</span> Contributors</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Please add yourself to this list when you contribute code!
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/the-kenny">Moritz Ulrich</a> (Maintainer)</li>
+<li><a href="https://github.com/ruediger">Rüdiger Sonderfeld</a></li>
+<li><a href="https://github.com/aristidb">Aristid Breitkreuz</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Moritz Ulrich</p>
+<p class="date">Created: 2016-02-29 Mon 21:49</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
