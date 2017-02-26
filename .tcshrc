@@ -1,16 +1,32 @@
 #VARIABLES
 set prompt="%{\033[36m%}%n%{\033[31m%}@%{\033[33m%}%m: %{\033[32m%}%B%~%b%# "
-set autolist set color set colorcat
-set EDITOR=vim
-set VISUAL=vim
+set autolist=ambiguous
+set addsuffix
+set autorehash
+set autoexpand
+set highlight
+set implicitcd
+set visiblebell
+set color
+set colorcat
+set printexitvalue
+set correct=cmd
+set complete=enhance
+set EDITOR=nvi
+set VISUAL=nvi
+set path = ( $path /usr/pkg/bin )
 
 #ALIAS
+alias startplasmacompositor /usr/local/bin/startplasmacompositor
+alias weather curl -4 wttr.in/quebec
+alias we weather
 alias ls ls --color='always'
 alias ttympv mpv -vo drm --profile=pseudo-gui
-alias clang clang -flto
+#alias clang clang -flto
 alias cc clang
-alias cpp clang++
+alias c++ clang++
 alias cxx clang++
+alias emacs emacs -nw
 
 #KEYBINDS
 bindkey -v
