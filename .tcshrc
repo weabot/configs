@@ -14,15 +14,19 @@ set correct=cmd
 set complete=enhance
 set EDITOR=nvi
 set VISUAL=nvi
-set path = ( $path /usr/pkg/bin )
+set path = ( $path /usr/pkg/bin /usr/scripts )
+
+#ENVIRONMENT
+setenv CC clang
+setenv CXX clang++
 
 #ALIAS
 alias startplasmacompositor /usr/local/bin/startplasmacompositor
 alias weather curl -4 wttr.in/quebec
 alias we weather
-alias ls ls --color='always'
+#alias ls ls --color='always' #for GNU
+#alias ls ls -G #for macOS and FreeBSD
 alias ttympv mpv -vo drm --profile=pseudo-gui
-#alias clang clang -flto
 alias cc clang
 alias c++ clang++
 alias cxx clang++
