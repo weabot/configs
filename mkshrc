@@ -1,0 +1,10 @@
+#VARIABLES
+PS1="[33m$PS1[00m"
+set -o vi
+PATH=$PATH:/usr/scripts
+
+#ALIAS
+alias ls='ls --color='always''
+alias cc='clang'
+alias cpp='clang++'
+alias cxx='clang++'
