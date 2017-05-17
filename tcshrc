@@ -21,11 +21,8 @@ setenv CC clang
 setenv CXX clang++
 
 #ALIAS
-alias startplasmacompositor /usr/local/bin/startplasmacompositor
 alias weather curl -4 wttr.in/quebec
 alias we weather
-alias man /usr/bin/man
-alias su /bin/su
 alias ls ls-F
 alias ttympv mpv -vo drm --profile=pseudo-gui
 alias cc clang
