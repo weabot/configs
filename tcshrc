@@ -1,7 +1,6 @@
 #VARIABLES
 #set prompt="%{\033[36m%}%n%{\033[31m%}@%{\033[33m%}%m: %{\033[32m%}%B%~%b%# "
 set prompt="%m:%n{%h} (%~)%# "
-unset history
 set autolist=ambiguous
 set addsuffix
 set autorehash
