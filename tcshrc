@@ -24,6 +24,7 @@ setenv CXX clang++
 #ALIAS
 alias weather curl -4 wttr.in/quebec
 alias we weather
+alias cdd cd ..
 alias ls ls-F
 alias ttympv mpv -vo drm --profile=pseudo-gui
 alias cc clang
