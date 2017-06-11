@@ -29,7 +29,7 @@ alias lf	ls -FA
 alias ll	ls -lsA
 alias tset	'set noglob histchars=""; eval `\tset -s \!*`; unset noglob histchars'
 alias z		suspend
-alias prompt 'set prompt = "$mch:q"":$cwd:t {\!} "'
+alias prompt 'set prompt = "$mch:q"":$user""{\!}"" ($cwd)% "'
 alias cd 'cd \!*; prompt'
 alias chdir 'cd \!*; prompt'
 alias popd 'popd \!*; prompt'
