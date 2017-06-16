@@ -56,13 +56,14 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "qterminal", NULL };
+static const char *termcmd[]  = { "konsole", NULL };
+static const char *lockcmd[]  = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ KMODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ KMODKEY,             		 XK_t,	    spawn,          {.v = termcmd } },
-	{ KMODKEY|Mod1Mask,		 XK_l	    spawn,	    {.v = "slock" } },
+	{ KMODKEY|ShiftMask,		 XK_l,	    spawn,	    {.v = lockcmd } },
 	{ KMODKEY,                       XK_b,      togglebar,      {0} },
 	{ KMODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ KMODKEY,                       XK_k,      focusstack,     {.i = -1 } },
