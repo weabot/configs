@@ -14,12 +14,4 @@ alias c (...)		{channel $*};
 alias j (...) 		{join $*};
 alias ! (...)		{exec_command $*};
 
-# Window management commands and bindings from darkstar
-addconfig -b AUTO_QUERY_UPDATE 1;
-alias wj (...)		{window new_hide swap last channel "$*"}; # window join
-alias nw (void)		{window create}; # new window
-alias dw (void)		{window delete}; # delete window
-alias wn (void)		{window next}; # window next
-alias wp (void)		{window previous}; # window previous
-
 bind  switch_channels;
