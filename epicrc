@@ -12,7 +12,7 @@ set CLOCK_24HOUR ON
 set SHELL /bin/csh
 
 # here from modules
-HIGHLIGHT weabot
+highlight pattern weabot
 
 set TMUX_AWAY ON
 
