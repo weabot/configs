@@ -3,7 +3,7 @@ load sasl_auth
 load history
 load netsplit
 load tmux_away
-load highlights
+load highlight
 
 # setting custom variables
 set DEFAULT_USERNAME weabot
