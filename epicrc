@@ -22,8 +22,6 @@ set CLOCK_24HOUR ON
 set SHELL /bin/csh
 
 # here from modules
-# highlight weabot
-
 set TMUX_AWAY ON
 
 set HISTORY_CIRCLEQ OFF
