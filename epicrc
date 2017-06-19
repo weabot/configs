@@ -3,9 +3,11 @@ load sasl_auth
 load history
 load netsplit
 load tmux_away
-load highlight
+
+load ~/.epic/auth
 
 # loading all modules from ~/.epic/mods
+# requires perl5 support compiled in
 PERL {
 	@modules = <~/.epic/mods/*>
 	foreach $module(@modules) {
@@ -20,7 +22,7 @@ set CLOCK_24HOUR ON
 set SHELL /bin/csh
 
 # here from modules
-highlight pattern weabot
+# highlight weabot
 
 set TMUX_AWAY ON
 
