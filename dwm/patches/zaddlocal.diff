@@ -1,0 +1,15 @@
+diff --git a/config.mk b/config.mk
+index a0361f5..7895be4 100644
+--- a/config.mk
++++ b/config.mk
+@@ -21,8 +21,8 @@ FREETYPEINC = /usr/include/freetype2
+ #FREETYPEINC = ${X11INC}/freetype2
+ 
+ # includes and libs
+-INCS = -I${X11INC} -I${FREETYPEINC}
+-LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS} -lXrender -lmpdclient
++INCS = -I${X11INC} -I${FREETYPEINC} -I/usr/local/include
++LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS} -L/usr/local/lib -lXrender -lmpdclient
+ 
+ # flags
+ CPPFLAGS = -D_BSD_SOURCE -D_POSIX_C_SOURCE=2 -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}

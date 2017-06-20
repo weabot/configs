@@ -1,0 +1,12 @@
+diff --git a/dwm.c b/dwm.c
+index 0362114..f191019 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -2134,6 +2134,7 @@ main(int argc, char *argv[])
+ 	checkotherwm();
+ 	setup();
+ 	scan();
++	system("sh ~/.config/dwm/autoexec");
+ 	run();
+ 	cleanup();
+ 	XCloseDisplay(dpy);

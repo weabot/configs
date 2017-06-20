@@ -61,6 +61,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "terminal", NULL }; // I decided to just symlink my preferred terminal to "terminal"
 static const char *lockcmd[]  = { "locker", NULL }; // Same with screen locker
 
+#include "mpdcontrol.c"
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ KMODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
@@ -87,6 +89,8 @@ static Key keys[] = {
 	{ KMODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ KMODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ KMODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ KMODKEY,			 XK_less,   mpdchange,	    {.i = -1 } },
+	{ KMODKEY,			 XK_greater, mpdchange,	    {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
