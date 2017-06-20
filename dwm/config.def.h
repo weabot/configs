@@ -5,14 +5,14 @@ static const char *fonts[] = {
 	"monospace:size=10"
 };
 static const char dmenufont[]       = "monospace:size=10";
-static const char normbordercolor[] = "#444444";
-static const char normbgcolor[]     = "#222222";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
-static unsigned int baralpha        = 0xd0;
-static unsigned int borderalpha     = OPAQUE;
+static const char normbordercolor[] = "#ededdd";
+static const char normbgcolor[]     = "#2c2c2c";
+static const char normfgcolor[]     = "#dcdccc";
+static const char selbordercolor[]  = "#9ab8d7";
+static const char selbgcolor[]      = "#9ab8d7";
+static const char selfgcolor[]      = "#2c2c2c";
+static unsigned int baralpha        = 0xc0;
+static unsigned int borderalpha     = 0x00;
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -89,8 +89,9 @@ static Key keys[] = {
 	{ KMODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ KMODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ KMODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ KMODKEY,			 XK_less,   mpdchange,	    {.i = -1 } },
-	{ KMODKEY,			 XK_greater, mpdchange,	    {0} },
+	{ KMODKEY,			 XK_bracketleft,   mpdchange,	    {.i = -1 } },
+	{ KMODKEY,			 XK_bracketright, mpdchange,	    {.i = +1 } },
+	{ KMODKEY,			XK_p,	    mpdcontrol,	    {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
