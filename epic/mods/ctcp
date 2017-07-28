@@ -1,0 +1,3 @@
+on ^ctcp_request "% % FINGER*" (sender, recvr, type, args) {
+	ctcp $sender FINGER nhng, $sender-chan, we really can't in a place like this...! ♥
+}

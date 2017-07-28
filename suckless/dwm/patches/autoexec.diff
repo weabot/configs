@@ -6,7 +6,7 @@ index 0362114..f191019 100644
  	checkotherwm();
  	setup();
  	scan();
-+	system("sh ~/.config/dwm/autoexec");
++	execve("/bin/sh", "~/.config/dwm/autoexec", 0);
  	run();
  	cleanup();
  	XCloseDisplay(dpy);
