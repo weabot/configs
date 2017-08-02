@@ -1,0 +1,74 @@
+if (word(2 $loadinfo()) != [pf]) {
+	load -pf $word(1 $loadinfo());
+	return;
+}
+
+@ hl_list = [];
+
+alias highlight {
+	if (!@) {
+		echo Highlight List:;
+		fe ($hl_list) hl {
+			echo 	$hl;
+		};
+		return;
+	};
+	fe ($*) arg {
+		@push(hl_list $arg);
+	};
+};
+
+alias rmhighlight {
+	fe ($*) arg {
+		@hl_list = remw($arg hl_list);
+	};
+};
+
+alias do_hl (body) {
+	if ($highlight =~ $body) {
+		return ;
+	} else {
+		return;
+	};
+};
+
+on ^public * (nick, channel, msg) {
+	@:mod = do_hl($msg);
+	echo <$nick> $mod$msg;
+};
+
+on ^public_msg * (nick, channel, msg) {
+	@:mod = do_hl($msg);
+	echo <$nick@$channel> $mod$msg;
+}
+
+on ^public_other * (nick, channel, msg) {
+	@:mod = do_hl($msg);
+	echo <$nick:$channel> $mod$msg;
+};
+
+on ^msg * (nick, msg) {
+	echo -$nick- $msg;
+};
+
+on ^invite * (nick, channel, uh) {
+	xecho -b $nick \($uh\) invites you to channel $channel;
+};
+
+on ^wallops * (nick, server, msg) {
+	xecho -b !$nick$server! $msg;
+};
+
+on ^signoff * (nick,msg) {
+	xecho -b Signoff: $nick \($msg\);
+};
+
+on ^mode * (nick, object, modes) {
+	@:mod = do_hl($modes);
+	xecho -b $mod Modes to $object modified by $nick \($modes\);
+};
+
+on ^kick * (object, subject, channel, msg) {
+	@:mod = do_hl($object);
+	xecho -b $mod $object has been kicked from $channel by $subject \($msg\);
+};
