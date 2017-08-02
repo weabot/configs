@@ -5,6 +5,10 @@ if (word(2 $loadinfo()) != [pf]) {
 
 @ hl_list = [];
 
+on connect * (server, port, name) {
+	@push(hl_list $N);
+};
+
 alias highlight {
 	if (!@) {
 		echo Highlight List:;
@@ -25,10 +29,12 @@ alias rmhighlight {
 };
 
 alias do_hl (body) {
-	if ($highlight =~ $body) {
-		return ;
-	} else {
-		return;
+	fe ($hl_list) hl {
+		if (substr($hl $body) != -1) {
+			return ;
+		} else {
+			return;
+		};
 	};
 };
 
@@ -40,12 +46,17 @@ on ^public * (nick, channel, msg) {
 on ^public_msg * (nick, channel, msg) {
 	@:mod = do_hl($msg);
 	echo <$nick@$channel> $mod$msg;
-}
+};
 
 on ^public_other * (nick, channel, msg) {
 	@:mod = do_hl($msg);
 	echo <$nick:$channel> $mod$msg;
 };
+
+on ^action * (sender, receiver, msg) {
+	@:mod = do_hl($msg);
+	echo * $mod$sender $msg;
+}
 
 on ^msg * (nick, msg) {
 	echo -$nick- $msg;
