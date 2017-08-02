@@ -62,15 +62,19 @@ on ^msg * (nick, msg) {
 	echo -$nick- $msg;
 };
 
-on ^invite * (nick, channel, uh) {
-	xecho -b $nick \($uh\) invites you to channel $channel;
+on ^invite * (nick, channel, userhost) {
+	xecho -b $nick \($userhost\) invites you to channel $channel;
 };
 
 on ^wallops * (nick, server, msg) {
 	xecho -b !$nick$server! $msg;
 };
 
-on ^signoff * (nick,msg) {
+on ^join * (nick, channel, userhost, status) {
+	xecho -b $nick joined channel $channel \($status\);
+};
+
+on ^signoff * (nick, msg) {
 	xecho -b Signoff: $nick \($msg\);
 };
 
