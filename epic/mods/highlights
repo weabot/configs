@@ -80,10 +80,10 @@ on ^signoff * (nick, msg) {
 
 on ^mode * (nick, object, modes) {
 	@:mod = do_hl($modes);
-	xecho -b $mod Modes to $object modified by $nick \($modes\);
+	xecho -b ${mod}Modes to $object modified by $nick \($modes\);
 };
 
 on ^kick * (object, subject, channel, msg) {
 	@:mod = do_hl($object);
-	xecho -b $mod $object has been kicked from $channel by $subject \($msg\);
+	xecho -b ${mod}$object has been kicked from $channel by $subject \($msg\);
 };
