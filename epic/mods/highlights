@@ -56,7 +56,7 @@ on ^public_other * (nick, channel, msg) {
 on ^action * (sender, receiver, msg) {
 	@:mod = do_hl($msg);
 	echo * $mod$sender $msg;
-}
+};
 
 on ^msg * (nick, msg) {
 	echo -$nick- $msg;
