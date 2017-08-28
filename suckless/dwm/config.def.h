@@ -2,19 +2,23 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"monospace:size=10"
+	"Iosevka:size=10"
 };
 static const char dmenufont[]       = "monospace:size=10";
-static const char normbordercolor[] = "#ededdd";
-static const char normbgcolor[]     = "#2c2c2c";
+static const char normbordercolor[] = "#dcdccc";
+static const char normbgcolor[]     = "#3f3f3f";
 static const char normfgcolor[]     = "#dcdccc";
-static const char selbordercolor[]  = "#9ab8d7";
-static const char selbgcolor[]      = "#9ab8d7";
-static const char selfgcolor[]      = "#2c2c2c";
-static unsigned int baralpha        = 0xc0;
-static unsigned int borderalpha     = 0x00;
+static const char selbordercolor[]  = "#a0afa0";
+static const char selbgcolor[]      = "#a0afa0";
+static const char selfgcolor[]      = "#040404";
+static unsigned int baralpha        = 0xf0;
+static unsigned int borderalpha     = 0x80;
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, 0: display systray on the last monitor*/
+static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 

@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Hack:pixelsize=12:antialias=false:autohint=true";
+static char font[] = "Monego:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 #define histsize 2000
 
@@ -84,35 +84,35 @@ static char termname[] = "xterm-256color";
 static unsigned int tabspaces = 4;
 
 /* bg opacity */
-static const int alpha = 0xf0;
+static const int alpha = 0xf5;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#3f3f3f",
-	"#705050",
-	"#60b48a",
-	"#dfaf8f",
-	"#9ab8d7",
-	"#dc8cc3",
-	"#8cd0d3",
-	"#dcdccc",
+	"#3f3f3f",	// Black
+	"#cc9393",	// Red
+	"#7f9f7f",	// Green
+	"#d0bf8f",	// Orange
+	"#6ca0a3",	// Blue
+	"#dc8cc3",	// Purple
+	"#93e0e3",	// Teal
+	"#dcdccc",	// White
 
 	/* 8 bright colors */
-	"#709080",
-	"#dca3a3",
-	"#72d5a3",
-	"#f0dfaf",
-	"#94bff3",
-	"#ec93d3",
-	"#93e0e3",
-	"#ffffff",
+	"#7f9f7f",	// Black
+	"#d78787",	// Red
+	"#bfebbf",	// Green
+	"#f0dfaf",	// Orange (Yellow)
+	"#8cd0d3",	// Blue
+	"#dc8cc3",	// Purple
+	"#93e0e3",	// Teal
+	"#ffffff",	// White
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#2c2c2c",
-	"#dcdccc",
+	"#3f3f3f",	// Background
+	"#dcdccc",	// Foreground
 };
 
 
