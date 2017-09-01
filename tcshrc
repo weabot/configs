@@ -8,8 +8,6 @@ set autoexpand
 set highlight
 set implicitcd
 set visiblebell
-set color
-set colorcat
 set printexitvalue
 set correct=cmd
 set complete=enhance
@@ -17,15 +15,12 @@ set EDITOR=nvi
 set VISUAL=nvi
 set path = ( /usr/5bin $path /usr/pkg/bin /usr/scripts )
 
-#for epic5
-set snoonet="irc.snoonet.org:6697::weabot::IRC-SSL"
-set freenode="irc.freenode.com:6697::weabot::IRC-SSL"
-
 #ENVIRONMENT
 setenv CC clang
 setenv CXX clang++
 setenv EDITOR nvi
 setenv VISUAL nvi
+setenv DVTM_TERM screen
 
 #ALIAS
 alias weather curl -4 wttr.in/quebec

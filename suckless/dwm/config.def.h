@@ -5,14 +5,14 @@ static const char *fonts[] = {
 	"Iosevka:size=10"
 };
 static const char dmenufont[]       = "monospace:size=10";
-static const char normbordercolor[] = "#dcdccc";
+static const char normbordercolor[] = "#3f3f3f";
 static const char normbgcolor[]     = "#3f3f3f";
 static const char normfgcolor[]     = "#dcdccc";
-static const char selbordercolor[]  = "#a0afa0";
+static const char selbordercolor[]  = "#8fb28f";
 static const char selbgcolor[]      = "#a0afa0";
 static const char selfgcolor[]      = "#040404";
 static unsigned int baralpha        = 0xf0;
-static unsigned int borderalpha     = 0x80;
+static unsigned int borderalpha     = 0xf5;
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
