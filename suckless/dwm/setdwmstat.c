@@ -34,9 +34,9 @@
 /* Set the status through X11 */
 void set_status(char*, Display*, Window);
 /* Format the time into a readable string */
-char *format_time(struct tm*);
+void format_time(struct tm*, char **ftime);
 
-// Days of the week
+/* Days of the week */
 char *doftw[7] = { "Sunday", "Monday", "Tuesday", "Wednesday",
 		   "Thursday", "Friday", "Saturday" };
 
@@ -52,26 +52,18 @@ main()
 	w = DefaultRootWindow(d);
 
 	/* Main time holders */
-	time_t *tloc;
 	struct tm *stime;
-
-	/* Initiate the main time_t pointer */
-	tloc = malloc(sizeof(time_t));
-	time(tloc);
-
-	/* Initiate the string containing the formatted time */
+	time_t *tloc = malloc(sizeof(time_t));
 	char *ftime = malloc(256);
-	stime = localtime(tloc);
-	ftime = format_time(stime);
-	set_status(ftime, d, w);
 
 	for (;;)
 	{
-		sleep(60 - (time(tloc) % 60));
 		time(tloc);
 		stime = localtime(tloc);
-		ftime = format_time(stime);
+		format_time(stime, &ftime);
 		set_status(ftime, d, w);
+
+		sleep(60 - (time(tloc) % 60));
 	}
 
 	return 0;
@@ -84,17 +76,14 @@ set_status(char *ftime, Display *d, Window w)
 	XSync(d, 1);
 }
 
-char *
-format_time(struct tm *stime)
+void
+format_time(struct tm *stime, char **ftime)
 {
-	char *ftime = malloc(256);
-	snprintf(ftime, 255, "%s %02d-%02d-%04d %02d:%02d",
+	snprintf(*ftime, 255, "%s %02d-%02d-%04d %02d:%02d",
 		doftw[stime->tm_wday], 		// Day of the week
 		stime->tm_mday, 		// Day of the month
 		stime->tm_mon + 1,		// Month
 		1900 + stime->tm_year,		// Year
 		stime->tm_hour,			// Hour
 		stime->tm_min);			// Minute
-
-	return ftime;
 }
