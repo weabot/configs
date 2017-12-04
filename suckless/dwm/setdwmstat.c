@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 weabot <weabot@yandex.ru>
+ * Copyright (c) 2017 weabot <xi@nuxi.ca>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
